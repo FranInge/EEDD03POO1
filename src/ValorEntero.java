@@ -1,5 +1,6 @@
 public class ValorEntero {
-    int ve;
+    private int ve;
+    //public static final int veCte=0; final: no se puede sobreesccribir en cualquier sobreclase que herede
 
     public ValorEntero(){
         this.ve = 0;
@@ -7,6 +8,7 @@ public class ValorEntero {
 
     public ValorEntero(int ve){//Los constructores son los primeros metodos sobre cargados
         this.ve = ve;
+        //this.veCte = 2; No se puede modificar una constante
     }
 
     public int getVe() {
@@ -35,4 +37,25 @@ public class ValorEntero {
     }
 
 
+    //Metodo que decuelva una REFERENCIA (tipo valorEntero) al objeto ValorEntero con mayor valor ve
+
+    public ValorEntero compararVe(ValorEntero o){
+        if(this.getVe() > o.getVe()){
+            return this;
+        }else{
+            return o;
+        }
+    }
+
+
+
+
+    /*
+    public static ValorEntero mayor(ValorEntero ve1, ValorEntero ve2){
+        if(ve1.getVe() > ve2.getVe()){
+            return ve1;
+        }else{
+            return ve2;
+        }
+    }*/
 }
