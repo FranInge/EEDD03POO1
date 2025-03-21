@@ -1,5 +1,5 @@
-public class Imagen extends Publicacion {
-
+public class Imagen extends Publicacion implements Mostrable{//Otra clase que hereda de Publicacion
+//Se implementa la interfaz Mostrable
     String archivo;
 
     public Imagen(){
@@ -16,4 +16,11 @@ public class Imagen extends Publicacion {
         return super.getText() + " img archivo: " + this.archivo;//super.getText() llama al metodo de la superclase
     }
 
+    public String mostrarColor(){
+        return "Color: " + this.archivo;
+    }
+
+    public String mostrarBN(){
+        return "MostrarBN: " + this.archivo;
+    }
 }

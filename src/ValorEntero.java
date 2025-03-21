@@ -8,7 +8,7 @@ public class ValorEntero {
 
     public ValorEntero(int ve){//Los constructores son los primeros metodos sobre cargados
         this.ve = ve;
-        //this.veCte = 2; No se puede modificar una constante
+        //this.veCte = 2; ERROR No se puede modificar una constante
     }
 
     public int getVe() {
@@ -34,6 +34,11 @@ public class ValorEntero {
 
     public void sumarVe(int v1, int v2){ //Sobrecargar metodos: Consiste en crear un nuevo metodo
         this.setVe(this.getVe() + v1 + v2);//Con el mismo nombre pero diferente lista de parametros
+    }
+
+    //Se crea una misma funcion pero con diferente tipo de parametros
+    public void sumarVe(int v1, double v2){
+        this.setVe(this.getVe() + v1 + (int)v2);//Le hacemos un cast a v2 para cambiar double a int
     }
 
 
